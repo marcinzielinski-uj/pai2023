@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <style>
+    table, th, td {
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body>
+<h1>Kraje świata</h1>
+<table>
+  <tbody>
+
+    <% data.forEach((row) => { %>
+    <tr>
+      <td><%=row.Code %> </td><td><%=row.Name %></td>
+    </tr>
+    <% }); %>
+
+  </tbody>
+</table>
+
+
+
+<hr>
+
+</body>
+</html>

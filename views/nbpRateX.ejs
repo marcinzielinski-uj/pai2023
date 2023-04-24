@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      .yel {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <form>
+      Podaj walutę: <input name="code">
+      <input type="submit">
+    </form>
+
+    <% if(data){ %>
+    <p class="yel">
+      Kurs <%= data.currency %> (<%= data.code %>) w dniu <%= data.rates[0].effectiveDate %> to <%= data.rates[0].mid %>
+    </p>
+    <% } %>
+
+    <hr>
+    <a href="/nbp"> ## powrót do strony głownej ##</a>
+
+  </body>
+</html>
